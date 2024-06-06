@@ -5,8 +5,10 @@ require 'views/partials/banner.php';
 ?>
 
     <main>
-        <div class="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8">
-            <h1>This is <?= $headerText; ?> Page</h1>
+        <div class="w-full xl:w-8/12 mb-12 xl:mb-0 px-4 mx-auto mt-24">
+            <p>
+                <?= htmlspecialchars($note['body']); ?>
+            </p>
         </div>
     </main>
 
