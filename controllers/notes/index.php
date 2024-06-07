@@ -8,4 +8,4 @@ $notes = $db->query("SELECT * FROM notes where user_id = :userid", ['userid' => 
 
 $headerText = "My Notes";
 
-require 'views/notes-view.php';
+require 'views/notes/index-view.php';

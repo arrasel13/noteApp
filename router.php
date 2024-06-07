@@ -13,6 +13,7 @@ function abort($status = Responses::NOTFOUND)
 {
     http_response_code($status);
     require "views/{$status}.php";
+    exit();
 }
 
 

@@ -25,63 +25,25 @@ require 'views/partials/banner.php';
                         </svg>
                     </span>
                 </li>
-                <li class="flex items-center text-gray-500">
+                <li class="flex items-center">
                     <a href="/notes" class="text-body-color hover:text-primary text-base font-medium">Notes</a>
+                    <span class="text-body-color px-3">
+                        <svg width="7" height="12" viewBox="0 0 7 12" class="fill-current">
+                           <path d="M0.879233 11.4351C0.808625 11.4351 0.720364 11.3998 0.667408 11.3469C0.543844 11.2233 0.543844 11.0291 0.649756 10.9056L5.09807 6.17483C5.18633 6.08657 5.18633 5.92771 5.09807 5.82179L0.649756 1.09105C0.526192 0.967487 0.543844 0.773315 0.667408 0.649751C0.790972 0.526187 0.985145 0.543839 1.10871 0.667403L5.55702 5.39815C5.85711 5.73353 5.85711 6.26309 5.55702 6.58083L1.10871 11.3292C1.0381 11.3998 0.967493 11.4351 0.879233 11.4351Z"/>
+                           <path fill-rule="evenodd" clip-rule="evenodd" d="M0.229332 10.5281L4.48868 5.99831L0.24288 1.48294C-0.133119 1.09849 -0.0312785 0.549591 0.267983 0.25033C0.652758 -0.134445 1.2069 -0.0332381 1.50812 0.267982L1.52041 0.280272L5.9781 5.02138C6.46442 5.56491 6.47872 6.42661 5.96853 6.96778V6.96778L1.50834 11.7289C1.36051 11.8767 1.15353 12 0.879227 12C0.660517 12 0.428074 11.9064 0.267983 11.7463C-0.0719543 11.4064 -0.0699959 10.8773 0.220873 10.538L0.229332 10.5281ZM5.55702 6.58083C5.85711 6.26309 5.85711 5.73353 5.55702 5.39815L1.10871 0.667403C0.985145 0.543839 0.790972 0.526187 0.667408 0.649751C0.543844 0.773315 0.526192 0.967487 0.649756 1.09105L5.09807 5.82179C5.18633 5.92771 5.18633 6.08657 5.09807 6.17483L0.649756 10.9056C0.543844 11.0291 0.543844 11.2233 0.667408 11.3469C0.720364 11.3998 0.808625 11.4351 0.879233 11.4351C0.967493 11.4351 1.0381 11.3998 1.10871 11.3292L5.55702 6.58083Z"/>
+                        </svg>
+                    </span>
+                </li>
+                <li class="flex items-center text-gray-500">
+                    <a href="/notes" class="text-body-color hover:text-primary text-base font-medium">Single Note</a>
                 </li>
             </ul>
         </div>
 
         <div class="w-full xl:w-8/12 mb-12 xl:mb-0 px-4 mx-auto mt-12">
-            <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded ">
-                <div class="rounded-t mb-0 px-4 py-3 border-0">
-                    <div class="flex flex-wrap items-center">
-                        <div class="relative w-full px-4 max-w-full flex-grow flex-1 text-right">
-                            <a href="#" class="bg-indigo-500 text-white active:bg-indigo-600 text-sm font-bold uppercase px-3 py-2 rounded outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150">
-                                <i class="fa-solid fa-plus"></i> Add New
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
-                    <thead class="text-xs text-gray-700 bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
-                        <tr>
-                            <th scope="col" class="px-6 py-3">
-                                SN
-                            </th>
-                            <th scope="col" class="px-6 py-3">
-                                Note Content
-                            </th>
-                            <th scope="col" class="px-6 py-3">
-                                Action
-                            </th>
-                        </tr>
-                    </thead>
-                    <tbody>
-
-                    <?php $i = 1; foreach($notes as $note): ?>
-
-
-                        <tr class="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700">
-                            <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                                <?= $i; ?>
-                            </th>
-                            <td class="px-6 py-4">
-                                <?= htmlspecialchars($note['body']); ?>
-                            </td>
-                            <td class="px-6 py-4 flex gap-3">
-                                <a href="/note?id=<?= $note['id']; ?>" class="font-medium text-gray-400 hover:text-gray-900 dark:text-blue-500 hover:underline"><i class="fa-regular fa-eye"></i></a>
-                                <a href="/note?id=<?= $note['id']; ?>" class="font-medium text-gray-400 hover:text-gray-900 dark:text-blue-500 hover:underline"><i class="fa-regular fa-pen-to-square"></i></a>
-                                <form action="">
-                                    <button type="submit" class="font-medium text-gray-400 hover:text-gray-900 dark:text-blue-500 hover:underline"><i class="fa-regular fa-trash-can"></i></button>
-                                </form>
-                            </td>
-                        </tr>
-
-                    <?php $i++; endforeach; ?>
-
-                    </tbody>
-                </table>
-            </div>
+            <p>
+                <?= htmlspecialchars($note['body']); ?>
+            </p>
 
         </div>
     </main>
