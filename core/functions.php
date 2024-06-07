@@ -19,3 +19,13 @@ function authorize($condition, $status = Responses::NOTAUTHORIZED)
         return abort($status);
     }
 }
+
+function base_path($path)
+{
+    return BASE_PATH . $path;
+}
+
+function view($path, $args = []){
+    extract($args);
+    return require base_path("views/{$path}");
+}

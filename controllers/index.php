@@ -1,5 +1,5 @@
 <?php
 
-$headerText = "Home";
-
-require 'views/index-view.php';
+view('index-view.php',[
+    'headerText' => "Home",
+]);

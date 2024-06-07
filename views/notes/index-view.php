@@ -1,7 +1,7 @@
 <?php
-require 'views/partials/header.php';
-require 'views/partials/navbar.php';
-require 'views/partials/banner.php';
+require base_path('views/partials/header.php');
+require base_path('views/partials/navbar.php');
+require base_path('views/partials/banner.php');
 ?>
 
     <main>
@@ -31,7 +31,7 @@ require 'views/partials/banner.php';
             </ul>
         </div>
 
-        <div class="w-full xl:w-8/12 mb-12 xl:mb-0 px-4 mx-auto mt-12">
+        <div class="w-full xl:w-8/12 mb-12 xl:mb-0 px-4 mx-auto mt-12 pb-8">
             <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded ">
                 <div class="rounded-t mb-0 px-4 py-3 border-0">
                     <div class="flex flex-wrap items-center">
@@ -58,7 +58,10 @@ require 'views/partials/banner.php';
                     </thead>
                     <tbody>
 
-                    <?php $i = 1; foreach($notes as $note): ?>
+                    <?php
+                        $i = 1;
+                        foreach($notes as $note):
+                    ?>
 
 
                         <tr class="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700">
@@ -77,7 +80,10 @@ require 'views/partials/banner.php';
                             </td>
                         </tr>
 
-                    <?php $i++; endforeach; ?>
+                    <?php
+                        $i++;
+                        endforeach;
+                    ?>
 
                     </tbody>
                 </table>
@@ -87,5 +93,5 @@ require 'views/partials/banner.php';
     </main>
 
 <?php
-require 'views/partials/footer.php';
+require base_path('views/partials/footer.php');
 ?>

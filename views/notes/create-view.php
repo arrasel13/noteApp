@@ -1,7 +1,7 @@
 <?php
-require 'views/partials/header.php';
-require 'views/partials/navbar.php';
-require 'views/partials/banner.php';
+require base_path('views/partials/header.php');
+require base_path('views/partials/navbar.php');
+require base_path('views/partials/banner.php');
 ?>
 
     <main>
@@ -28,14 +28,11 @@ require 'views/partials/banner.php';
                     <button type="submit" class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Save</button>
                 </div>
             </form>
-
-
-
         </div>
     </main>
 
 
 
 <?php
-require 'views/partials/footer.php';
+require base_path('views/partials/footer.php');
 ?>
