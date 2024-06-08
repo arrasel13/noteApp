@@ -65,8 +65,9 @@ require base_path('views/partials/banner.php');
                             </td>
                             <td class="px-6 py-4 flex gap-3">
                                 <a href="/note?id=<?= $note['id']; ?>" class="font-medium text-gray-400 hover:text-gray-900 dark:text-blue-500 hover:underline"><i class="fa-regular fa-eye"></i></a>
-                                <a href="/note?id=<?= $note['id']; ?>" class="font-medium text-gray-400 hover:text-gray-900 dark:text-blue-500 hover:underline"><i class="fa-regular fa-pen-to-square"></i></a>
-                                <form method="POST">
+                                <a href="/note/edit?id=<?= $note['id']; ?>" class="font-medium text-gray-400 hover:text-gray-900 dark:text-blue-500 hover:underline"><i class="fa-regular fa-pen-to-square"></i></a>
+                                <form method="POST" action="/notes">
+                                    <input type="hidden" name="_method" value="DELETE">
                                     <input type="hidden" name="removeid" value="<?= $note['id']; ?>">
                                     <button type="submit" class="font-medium text-gray-400 hover:text-gray-900 dark:text-blue-500 hover:underline"><i class="fa-regular fa-trash-can"></i></button>
                                 </form>

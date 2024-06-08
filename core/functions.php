@@ -22,6 +22,13 @@ function authorize($condition, $status = Responses::NOTAUTHORIZED)
     }
 }
 
+function abort($status = Responses::NOTFOUND)
+{
+    http_response_code($status);
+    require base_path("views/{$status}.php");
+    exit();
+}
+
 function base_path($path)
 {
     return BASE_PATH . $path;
