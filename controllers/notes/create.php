@@ -1,5 +1,8 @@
 <?php
 
+use core\Validate;
+use core\Database;
+
 $config = require base_path('config.php');
 $db = new Database($config['database']);
 $userid = 1;
