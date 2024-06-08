@@ -12,7 +12,7 @@ function routeToController($uri, $routes)
 function abort($status = Responses::NOTFOUND)
 {
     http_response_code($status);
-    require "views/{$status}.php";
+    require base_path("views/{$status}.php");
     exit();
 }
 

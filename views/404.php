@@ -1,6 +1,6 @@
 <?php
-require 'views/partials/header.php';
-require 'views/partials/navbar.php';
+require base_path('views/partials/header.php');
+require base_path('views/partials/navbar.php');
 ?>
 
 <main class="grid min-h-full place-items-center px-6 py-24 sm:py-32 lg:px-8">
@@ -16,5 +16,5 @@ require 'views/partials/navbar.php';
 </main>
 
 <?php
-require 'views/partials/footer.php';
+require base_path('views/partials/footer.php');
 ?>
